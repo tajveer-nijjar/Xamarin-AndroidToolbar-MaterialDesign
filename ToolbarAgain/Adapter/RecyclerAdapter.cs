@@ -29,6 +29,9 @@ namespace ToolbarAgain.Adapter
         }
 
         // Creates new view (invoked by layout manager)
+        // This ll run for as many number of times as there are images on the screen at one time.
+        //    eg, there are 7 records shown on the display at one time. So this ll run only 7 times
+        //    to create the view for the first 7 records only. After that it ll not run.
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
             // Setup and inflate your layout here.
@@ -42,6 +45,7 @@ namespace ToolbarAgain.Adapter
 
 
         // Replace the contents of a view (invoked by layout manager)
+        // Runs for each image.
         public override void OnBindViewHolder(RecyclerView.ViewHolder viewHolder, int position)
         {
 

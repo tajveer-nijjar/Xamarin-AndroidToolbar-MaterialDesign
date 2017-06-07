@@ -11,7 +11,7 @@
 
 
 
-  <style name="ParentTheme" parent="Theme.AppCompat.NoActionBar">
+  <style name="ParentTheme" parent="Theme.AppCompat.Light.NoActionBar">
 
     <item name="colorPrimary">@color/colorPrimary</item>
     <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
