@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--For all properties see: http://developer.android.com/guide/topics/resources/menu-resource.html-->
+<menu 
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+      >
+
+  <item
+    android:id="@+id/discard"
+    app:showAsAction="always"
+    android:orderInCategory="100"
+    android:title="Search"
+    android:icon="@drawable/ic_discard"
+  />
+  <item
+    android:id="@+id/search"
+    app:showAsAction="always"
+    android:orderInCategory="100"
+    android:title="Search"
+    android:icon="@drawable/ic_search"
+  />
+  <item
+    android:id="@+id/settings"
+    app:showAsAction="never"
+    android:orderInCategory="100"
+    android:title="Settings"
+  />
+  <item
+    android:id="@+id/edit"
+    app:showAsAction="never"
+    android:orderInCategory="100"
+    android:title="Edit"
+  />
+  <item
+    android:id="@+id/exit"
+    app:showAsAction="never"
+    android:orderInCategory="100"
+    android:title="Exit"
+  />
+
+</menu>
+
+<!-- Code to implement into Activity:
+
+Android.Widget.SearchView searchView;
+public override bool OnCreateOptionsMenu(IMenu menu)
+{
+  this.MenuInflater.Inflate(Resource.Menu.ToolbarMenu, menu);
+
+  var searchItem = menu.FindItem(Resource.Id.action_search);
+
+  searchView = searchItem.ActionProvider.JavaCast<Android.Widget.SearchView>();
+
+  searchView.QueryTextSubmit += (sender, args) =>
+  {
+    Toast.MakeText(this, "You searched: " + args.Query, ToastLength.Short).Show();
+
+  };
+
+
+  return base.OnCreateOptionsMenu(menu);
+}
+
+-->
