@@ -7,6 +7,9 @@
   android:background="@color/colorPrimary"
   android:minHeight="?attr/actionBarSize"
   android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                                   
+  app:popupTheme="@style/PopupTheme"
+                                   
   android:elevation="20dp"
   >
 
